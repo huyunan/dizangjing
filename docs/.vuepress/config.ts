@@ -16,12 +16,12 @@ import { plumeTheme } from 'vuepress-theme-plume'
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
-  title: 'dizangjing',
+  title: '地藏经',
   description: '地藏经',
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   ],
 
   bundler: viteBundler(),
@@ -29,7 +29,7 @@ export default defineUserConfig({
 
   theme: plumeTheme({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
-    // hostname: 'https://your_site_url',
+    hostname: 'http://huyunan.xyz',
 
     /* 文档仓库配置，用于 editLink */
     // docsRepo: '',
@@ -37,10 +37,10 @@ export default defineUserConfig({
     // docsBranch: '',
 
     /* 页内信息 */
-    // editLink: true,
-    // lastUpdated: true,
-    // contributors: true,
-    // changelog: false,
+    editLink: false,
+    lastUpdated: false,
+    contributors: false,
+    changelog: false,
 
     /**
      * 博客
@@ -93,7 +93,7 @@ export default defineUserConfig({
     // },
 
     /* 文章字数统计、阅读时间，设置为 false 则禁用 */
-    // readingTime: true,
+    readingTime: false,
 
     /**
       * markdown
