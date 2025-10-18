@@ -12,9 +12,18 @@
   --vp-font-family-base: 宋体, SimSun;
   --vp-font-family-mono: 宋体, SimSun;
 }
+#VPContent {
+  overflow-x: hidden;
+}
 .vp-doc-container:has(.container) {
   padding-top: 22px;
   padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .vp-doc-container:has(.container) {
+    padding-left:10px;
+    padding-right:10px;
+  }
 }
 .vp-doc-title.padding.page-title {
   padding-bottom: 0.5rem;
@@ -22,6 +31,7 @@
 }
 .vp-sidebar-item.sidebar-item.level-1 .text {
   font-weight: bold;
+  font-size: 16px;
 }
 .vp-breadcrumb {
   display: none;
@@ -34,7 +44,8 @@
 }
 .vp-doc.plume-content p {
   text-indent: 2em;
-  font-size: 22px;
+  font-size: 20px;
+  margin: 0;
 }
 .vp-doc.plume-content p:has(img) {
   display: flex;
@@ -48,11 +59,11 @@
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 22px;
+  font-size: 20px;
 }
 .vp-doc.plume-content pre {
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
 }
 .vp-doc.plume-content div :last-of-type {
   margin-bottom: 0;

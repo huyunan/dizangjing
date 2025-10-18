@@ -8,5 +8,5 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export default defineNavbarConfig([
   { text: '地藏经全文', link: '/' },
-  { text: '地藏经原文', link: '/notes/source/1.忉利天宫神通品第一.md', activeMatch: '^/source/' },
+  { text: '地藏经原文', link: '/notes/1.地藏经原文.md', activeMatch: '^/source/' },
 ])
