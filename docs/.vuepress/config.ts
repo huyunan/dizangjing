@@ -22,6 +22,19 @@ export default defineUserConfig({
   head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+
+    // 百度统计 API
+    ['script', {}, 
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src =  "https://hm.baidu.com/hm.js?eb08b91a0c9f26e5eaceb1bdf9ef403a";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      `
+    ]
   ],
 
   bundler: viteBundler(),
