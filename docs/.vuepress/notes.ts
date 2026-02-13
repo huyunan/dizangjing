@@ -31,6 +31,13 @@ const sourceNote = defineNoteConfig({
   sidebar: 'auto',
 })
 
+// 论语原文
+const lunyuNote = defineNoteConfig({
+  dir: 'lunyu',
+  link: '/lunyu',
+  sidebar: 'auto',
+})
+
 /**
  * 导出所有的 note
  * 每一个 note 都应该填入到 `notes.notes` 数组中
@@ -39,5 +46,5 @@ const sourceNote = defineNoteConfig({
 export default defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [sourceNote],
+  notes: [sourceNote, lunyuNote],
 })
