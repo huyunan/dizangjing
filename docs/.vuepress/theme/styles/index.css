@@ -11,6 +11,13 @@
 :root {
   --vp-font-family-base: 宋体, SimSun;
   --vp-font-family-mono: 宋体, SimSun;
+  margin-top: max(env(safe-area-inset-top), 12px) !important;
+}
+#navScreen {
+  margin-top: max(env(safe-area-inset-top), 12px) !important;
+}
+.vp-local-nav.reached-top,.vp-sidebar.open {
+  padding-top: max(env(safe-area-inset-top), 12px) !important;
 }
 #VPContent {
   overflow-x: hidden;
