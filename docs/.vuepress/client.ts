@@ -5,16 +5,18 @@ import './theme/styles/index.css'
 export default defineClientConfig({
   enhance({ app, router }) {
     router.afterEach((to) => {
-      localStorage.setItem('to.path', to.fullPath);
+      if (typeof window !== "undefined") {
+        localStorage.setItem('to.path', to.fullPath);
+      }
     });
     router.beforeEach((to, from, next) => {
-      const topath = localStorage.getItem('to.path');
-      if (to.fullPath === '/' && from.fullPath === '/' && topath) {
-        router.push(topath);
+      if (typeof window !== "undefined") {
+        const topath = localStorage.getItem('to.path');
+        if (to.fullPath === '/' && from.fullPath === '/' && topath) {
+          router.push(topath);
+        }
       }
       next();
     });
-    
-    
   },
 })
